@@ -4,7 +4,7 @@ class PlayerTest < MiniTest::Unit::TestCase
   # Defaults to right side
   def test_next_move_blank
     field = Field.new
-    piece = Piece.new
+    piece = PieceO.new
     assert player = Player.new
     next_move = player.next_move(field, piece)
 
@@ -32,7 +32,7 @@ class PlayerTest < MiniTest::Unit::TestCase
     # |X|X|X|X|X|X|X| | |X|
     # +-+-+-+-+-+-+-+-+-+-+
 
-    piece = Piece.new
+    piece = PieceO.new
     assert player = Player.new
     next_move = player.next_move(field, piece)
 

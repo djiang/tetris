@@ -1,5 +1,6 @@
 require './lib/field'
 require './lib/piece'
+require './lib/piece_o'
 require './lib/player'
 
 class Tetris
@@ -14,7 +15,7 @@ class Tetris
     @field.display
   end
 
-  def step(piece = Piece.new)
+  def step(piece = PieceO.new)
     move = @player.next_move(@field, piece)
     @field.apply_move(move, piece)
   end
